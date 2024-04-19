@@ -68,6 +68,22 @@ let restart = () => {
     location.reload()
 }
 
-document.addEventListener('click', restart)
-document.addEventListener('keydown', jump)
+/*document.addEventListener('click', restart)
+
+document.addEventListener('keydown', jump)*/
+
 gameBoard.addEventListener('touchstart', jump)
+
+document.addEventListener('click', (event) => {
+    
+    if (event.button === 0 || event.button === 'left') {
+        restart()
+    }
+});
+
+document.addEventListener('keydown', (event) => {
+    
+    if (event.key === ' ' || event.key === 'Space') {
+        jump()
+    }
+})
