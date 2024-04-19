@@ -70,3 +70,4 @@ let restart = () => {
 
 document.addEventListener('click', restart)
 document.addEventListener('keydown', jump)
+gameBoard.addEventListener('touchstart', jump)
